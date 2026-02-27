@@ -1,0 +1,29 @@
+# JetBrains IDEs (IntelliJ IDEA, etc.)
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
+.idea/**/shelf/
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/httpRequests/
+
+# Gradle / build outputs
+.gradle/
+build/
+out/
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
