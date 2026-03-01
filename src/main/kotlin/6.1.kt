@@ -33,11 +33,11 @@ class LoginConCuenta : Login() {
 class LoginConCuenta2FA : Login() {
     override fun pedirCredenciales() {
         var codigoValido = false
-      val usuario = super.pedirCredenciales()
+       super.pedirCredenciales()
         println("Introduce tu contraseña")
         readln()
         while (!codigoValido) {
-        println("Introduce el codigo numérico de 6 digitos que hemos enviado al correo asociado a tu usuario ($usuario)")
+        println("Introduce el codigo numérico de 6 digitos que hemos enviado al correo asociado a tu usuario")
         val codigo = readln()
         if (codigo.length == 6 && codigo.all { it.isDigit() }) codigoValido = true else println("El código introducido no es válido")
         }
