@@ -18,4 +18,8 @@ fun main() {
     println("- Punto de partida: ejecuta `es.ies.ejercicios.u6.ej62.v0.main` (DemoV0)")
     println("- Implementa la versión final en `es.ies.ejercicios.u6.ej62` (este paquete)")
     println("- Después, actualiza este main para demostrar el funcionamiento con logs")
+    val md = MarkdownReport()
+    println(md.generate("Informe",listOf("Primera linea", "Segunda linea", "Tercera linea")))
+    val csv = CsvReport()
+    println(csv.generate("Informe", listOf("Primera linea", "Segunda linea", "Tercera linea")))
 }
