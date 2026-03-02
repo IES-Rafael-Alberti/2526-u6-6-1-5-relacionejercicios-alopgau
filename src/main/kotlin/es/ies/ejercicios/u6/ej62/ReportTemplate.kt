@@ -10,8 +10,9 @@ package es.ies.ejercicios.u6.ej62
 abstract class ReportTemplate {
     final fun generate(title: String, lines: List<String>): String = buildString {
         appendLine(header("$title"))
-        lines.forEach { appendLine(formatLine(it)) }
-    }
+        lines.forEach { appendLine(formatLine(it))
+        }
+        appendLine(footer())}
 
     protected open fun header(title: String): String = "$title"
 

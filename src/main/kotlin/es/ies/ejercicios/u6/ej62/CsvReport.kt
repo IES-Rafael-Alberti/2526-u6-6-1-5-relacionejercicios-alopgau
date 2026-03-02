@@ -4,4 +4,6 @@ class CsvReport : ReportTemplate() {
     override fun header(title: String): String = "title, $title"
 
     override fun formatLine(line: String): String = "$line"
+
+    override fun footer(): String = ""
 }
