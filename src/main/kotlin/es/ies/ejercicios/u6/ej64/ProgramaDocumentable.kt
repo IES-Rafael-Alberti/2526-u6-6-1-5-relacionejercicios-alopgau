@@ -33,7 +33,7 @@ interface Resumible {
  */
 
 /**
- * Clase abstracta `PlantillaInforme` (Template Method)
+ * Clase abstracta `PlantillaInforme`
  * usada para generar informes a partir de texto resumido.
  */
 abstract class PlantillaInforme : Resumible {
@@ -43,10 +43,9 @@ abstract class PlantillaInforme : Resumible {
      * @param items Lista de items a resumir
      * @return sb Informe generado
      */
+    // Se usa un Template Method ya que la generación de archivos siempre será común (poner la cabecera, el formato de las lineas y el pie de página)
     fun generar(titulo: String, items: List<Resumible>): String {
-        // Crea el StringBuilder
         val sb = StringBuilder()
-
         sb.appendLine(cabecera(titulo))
 
         for (item in items) {
@@ -54,7 +53,7 @@ abstract class PlantillaInforme : Resumible {
         }
 
         sb.appendLine(pie())
-        return sb.toString() // devolver el string
+        return sb.toString()
     }
 
     /**
@@ -139,10 +138,11 @@ class Alumno : Persona {
         println("[Alumno:secondary] nombre=$nombre edad=$edad curso=$curso")
     }
 
+    // Constructor para simplemente registar un alumno en un curso, sin importar su edad
+
     constructor(nombre: String, curso: String) : this(nombre, edad = 0, curso = curso) {
         println("[Alumno:secondary] constructor(nombre, curso)")
     }
-
     override fun resumen(): String = "Alumno: ${super.resumen()} curso=$curso"
 }
 
