@@ -1,5 +1,5 @@
 package es.ies.ejercicios.u6.ej65
-
+import ej6_1.es.ies.ejercicios.u6.ej65.srp.App
 /**
  * Ejercicio 6.5 — Principios SOLID (RA7.d,e,f,g).
  *
@@ -13,4 +13,7 @@ fun main() {
     println("Ejercicio 6.5 (plantilla)")
     println("- Revisa `docs/ejercicios/6.5.md` para tareas SRP/OCP/LSP/ISP/DIP")
     println("- Ejecuta los mains de cada subpaquete para ver el punto de partida (v0)")
+    println("\nSRP\n")
+    val srp = App()
+    srp.ejecutar()
 }
