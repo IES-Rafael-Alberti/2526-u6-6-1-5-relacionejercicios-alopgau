@@ -133,7 +133,6 @@ class Alumno : Persona {
     val curso: String
 
     constructor(nombre: String, edad: Int, curso: String) : super(nombre, edad) {
-        // Asignar curso
         this.curso = curso
         println("[Alumno:secondary] nombre=$nombre edad=$edad curso=$curso")
     }
