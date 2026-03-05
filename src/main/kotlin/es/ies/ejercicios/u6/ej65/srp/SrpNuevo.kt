@@ -7,7 +7,7 @@ import es.ies.ejercicios.u6.ej64.Resumible
 
 class App() {
     var estado: Estado = Estado.APAGADO
-    val gestorMensajesApp = MensajesApp(Consola(), estado)
+    val gestorMensajesApp = MensajesApp(Consola())
     val registrador = Registrador()
     val generador = Generador()
 
@@ -21,6 +21,7 @@ class App() {
         registrarPersonas(items)
         val resultado = generarInforme(items)
         mostrarResultado(resultado)
+        finalizarEjecucion()
     }
 
     private fun preparar(): List<Persona> {
@@ -61,7 +62,7 @@ class App() {
         override fun escribir(msg: String) = println(msg)
     }
 
-    class MensajesApp(val io: Mensajes, val estado: Estado) {
+    class MensajesApp(private val io: Mensajes) {
         fun leerEstado(estado: Estado) {
             when (estado) {
                 Estado.PREPARANDO -> io.escribir("[SRP:Nuevo] Preparando datos...")
