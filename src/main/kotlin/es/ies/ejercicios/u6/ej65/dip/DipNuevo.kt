@@ -6,7 +6,7 @@ import es.ies.ejercicios.u6.ej64.Persona
 import es.ies.ejercicios.u6.ej64.Resumible
 
 
-class ControladorInformesV0(private val generador: Informe) {
+class ControladorInformesNuevo(private val generador: Informe) {
 
 
     fun imprimirListado(items: List<Resumible>) {
@@ -16,7 +16,7 @@ class ControladorInformesV0(private val generador: Informe) {
 }
 
 fun main() {
-    val controller = ControladorInformesV0(Csv())
+    val controller = ControladorInformesNuevo(Csv())
     controller.imprimirListado(
         listOf(
             Persona("Ana", 20),
