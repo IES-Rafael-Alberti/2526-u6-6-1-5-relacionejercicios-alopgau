@@ -2,9 +2,7 @@ package ej6_1.es.ies.ejercicios.u6.ej65.isp
 
 import es.ies.ejercicios.u6.ej64.Persona
 
-/**
- * v0 (viola ISP): interfaz "gorda" que fuerza a implementar métodos que algunos clientes no necesitan.
- */
+
 interface RepositorioPersonasCompletoV0 {
     fun guardar(persona: Persona)
     fun exportarCsv(): String

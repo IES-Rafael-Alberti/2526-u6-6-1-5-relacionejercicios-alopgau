@@ -2,15 +2,7 @@ package ej6_1.es.ies.ejercicios.u6.ej65.ocp.nuevo
 
 import es.ies.ejercicios.u6.ej64.Resumible
 
-enum class FormatoInformeV0 {
-    CSV,
-    MARKDOWN,
-    // TODO (ejercicio): cuando quieras añadir otro formato, v0 te obliga a modificar este enum y el `when`.
-}
 
-/**
- * v0 (viola OCP): para añadir un nuevo formato hay que modificar este `when`.
- */
 abstract class Informe {
     final fun generar(titulo: String,items: List<Resumible>) = buildString {
         appendLine(cabecera(titulo))
